@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+    font-family: 'Noto Serif JP', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('japan.jpg'); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); /* White translucent filter */
+    z-index: -1;
+  }
+  
+  /* Header Section */
+  .header {
+    background-color: #ffb7c5; /* Cherry blossom pink */
+    color: #6d2e46; /* Deep pink for contrast */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #6d2e46;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Paragraph Section */
+  .description {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .description p {
+    font-family: 'Noto Serif JP', serif;
+    color: #6d2e46; /* Deep pink for text */
+    text-align: justify;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Section */
+  .table-container {
+    margin: 20px auto;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #ffb7c5; /* Cherry blossom pink */
+    color: #6d2e46; /* Deep pink for contrast */
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  table tr:hover {
+    background-color: #ffe5ea; /* Light cherry blossom pink */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Bullet Point Section */
+  .lists-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .unordered-list, .ordered-list {
+    width: 45%;
+  }
+  
+  .unordered-list h2, .ordered-list h2 {
+    color: #6d2e46; /* Deep pink for headings */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .unordered-list ul, .ordered-list ol {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .unordered-list ul li, .ordered-list ol li {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-left: 4px solid #ffb7c5; /* Cherry blossom pink */
+    color: #6d2e46; /* Deep pink for text */
+    transition: background-color 0.3s ease;
+  }
+  
+  .unordered-list ul li:hover, .ordered-list ol li:hover {
+    background-color: #ffe5ea; /* Light cherry blossom pink */
+  }
+  
+  .ordered-list ol {
+    counter-reset: item;
+  }
+  
+  .ordered-list ol li {
+    counter-increment: item;
+  }
+  
+  .ordered-list ol li::before {
+    content: counter(item) ".";
+    font-weight: bold;
+    margin-right: 10px;
+    color: #ffb7c5; /* Cherry blossom pink */
+  }
+  /* Gallery Section Styles */
+.gallery-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .header p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+  }
+  
+  .gallery-column {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-item {
+    padding: 8px;
+    width: 50%;
+  }
+  
+  .gallery-item.full-width {
+    width: 100%;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05);
+  }
